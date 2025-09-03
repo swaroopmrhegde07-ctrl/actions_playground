@@ -2,7 +2,7 @@ name: Demo Pipeline
 on: push
 jobs:
     first_job:
-        runs-on: ubuntu-latest
+        runs-on: linuxg18
         steps:
             - name: welcome message
               run: echo "My firts Github Action Job"
