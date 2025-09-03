@@ -9,5 +9,5 @@ jobs:
             - name: List file
               run: ls
             - name: Hello script
-              run: ../../hello.sh
+              run: cat hello.sh
   
