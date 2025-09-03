@@ -10,6 +10,8 @@ jobs:
               run: ls
             - name: Checkout repository
               uses: actions/checkout@v4
+            - name: Set execute permission
+              run: chmod +x ./hello.sh
             - name: Hello script
               run: ./hello.sh
   
