@@ -15,3 +15,8 @@ jobs:
             - name: Hello script
               run: ./hello.sh
   
+    second_job:
+        runs-on: linuxg18
+        steps:
+            - name: welcome message
+              run: echo "My firts Github Action Job"
