@@ -1,0 +1,11 @@
+name: Demo Pipeline
+on: push
+jobs:
+    first_job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: welcome message
+              run: echo "My firts Github Action Job"
+            - name: List file
+              run: ls
+  
