@@ -17,7 +17,9 @@ jobs:
     runs-on: ubuntu-latest
     concurrency:
       group: 'production-deployment'
-      cancel-in-progress: true
+      cancel-in-progress: false
     steps:
       - name: Deploy step
-        run: echo "Deploying to production"
+        run: |
+          echo "Deploying to production"
+          sleep 600s
