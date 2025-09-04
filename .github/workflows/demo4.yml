@@ -14,12 +14,10 @@ jobs:
 
   deploy:
     needs: build_job_1
-    concurrency:
-      group: 'production-deployment'
-      cancel-in-progress: false
     runs-on: ubuntu-latest  
     steps:
       - name: Deploy step
+        timeout-minutes: 1
         run: |
           echo "Deploying to production"
           sleep 600s
