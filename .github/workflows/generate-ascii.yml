@@ -25,7 +25,7 @@ jobs:
         run: sleep 30
 
       - name: upload dragon.txt
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4.6.2
         with:
           name: dragon-artifact
           path: dragon.txt
@@ -46,9 +46,13 @@ jobs:
   deploy_job_3:
     runs-on: ubuntu-latest
     steps:
+      - name: Download dragon.txt
+        uses: actions/download-artifact@v3
+        with:
+          name: dragon-artifact
+
       - name: Display dragon.txt
         run: cat dragon.txt
-
 
       - name: Simulate deployment
         run: echo "Deploying dragon.txt..."
