@@ -2,7 +2,7 @@ name: Demo Pipeline
 on: push
 jobs:
     first_job:
-        runs-on: ubuntu-latest
+        runs-on: linuxg18
         steps:
             - name: welcome message
               run: echo "My firts Github Action Job"
@@ -14,4 +14,10 @@ jobs:
               run: chmod +x ./hello.sh
             - name: Hello script
               run: ./hello.sh
-            
+  
+    second_job:
+        runs-on: linuxg18
+        needs: first_job
+        steps:
+            - name: welcome message
+              run: echo "My firts Github Action Job"
