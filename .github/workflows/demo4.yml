@@ -1,0 +1,23 @@
+# .github/workflows/generate-ascii.yml
+name: demo4
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_job_1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: step2
+        run: echo "This is step"
+
+  deploy:
+    name: deploy
+    runs-on: ubuntu-latest
+    concurrency:
+      group: 'production-deployment'
+      cancel-in-progress: true
+    steps:
+      - name: Deploy step
+        run: echo "Deploying to production"
