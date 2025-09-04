@@ -31,11 +31,13 @@ jobs:
           path: dragon.txt
 
   test_job_2:
+    needs: build_job_1
     runs-on: ubuntu-latest
     steps:
-      - name: Pause for 10 seconds
-        run: sleep 10
-
+      - name: Download dragon.txt
+        uses: actions/download-artifact@v3
+        with:
+          name: dragon-artifact
 
       - name: Verify dragon.txt
         run: grep -i "dragon" dragon.txt
