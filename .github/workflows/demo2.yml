@@ -12,3 +12,5 @@ jobs:
           stepVar1: stepvalue1
         run: |
           echo "The value for stepvar1: $stepVar1"
+      - name: step2
+        run: echo "This is step $repovar1"
