@@ -1,4 +1,4 @@
-name: Generate ASCII Artwork
+name: demo2
 on:
   push:
     branches:
