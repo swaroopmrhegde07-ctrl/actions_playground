@@ -6,13 +6,12 @@ on:
 jobs:
   job1:
     runs-on: ubuntu-latest
+    env:
+      ACTIONS_RUNNER_DEBUG: true
     steps:
       - name: step1
         env:
           stepVar1: stepvalue1
         run: |
           echo "The value for stepvar1: $stepVar1"
-      - name: step2
-        run: echo "This is step ${{ vars.repovar1 }}"
-      - name: step3
-        run: echo "This is step ${{ secrets.reposec1 }}"
+    
