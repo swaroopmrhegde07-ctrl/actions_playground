@@ -8,6 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Use my composite action
-        uses: ./.github/my-composite-action
+        uses: ./.github/workflows/my-composite-action
         with:
           node-version: '18'
