@@ -1,0 +1,13 @@
+name: custom actions
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Use my composite action
+        uses: ./.github/my-composite-action
+        with:
+          node-version: '18'
